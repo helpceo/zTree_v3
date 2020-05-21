@@ -302,7 +302,7 @@
       n.parentTId = parentNode ? parentNode.tId : null;
       n.open = (typeof n.open == "string") ? tools.eqs(n.open, "true") : !!n.open;
       var isParent = data.nodeIsParent(setting, n);
-      if (tools.isArray(children)) {
+      if (tools.isArray(children) && children.length > 0) {
         data.nodeIsParent(setting, n, true);
         n.zAsync = true;
       } else {
